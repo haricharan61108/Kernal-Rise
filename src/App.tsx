@@ -1,11 +1,17 @@
-import React from 'react';
-import PrivacyPolicy from './PrivacyPolicy';
+
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import PrivacyPolicy from "./PrivacyPolicy";
 
 function App() {
   return (
-    <div className="App">
-      <PrivacyPolicy />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<PrivacyPolicy />} />
+        <Route path="/cliptoon" element={<PrivacyPolicy />} />
+        <Route path="/cliptoon/privacy" element={<PrivacyPolicy />} />
+        <Route path="/privacy" element={<PrivacyPolicy />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
